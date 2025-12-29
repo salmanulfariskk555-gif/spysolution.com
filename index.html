@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -679,10 +679,87 @@
                 margin-bottom: 60px;
             }
         }
-        /* 🔒 Desktop-il mobile menu hide cheyyan */
-@media (min-width: 993px) {
-    .mobile-menu {
-        display: none !important;
+        /* Gallery Section */
+.gallery {
+    padding: 120px 0;
+    background-color: var(--secondary-white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+/* Clients logo row */
+.client-logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+/* Laptop / Desktop */
+.client-logo-row img {
+    max-width: 80px;
+    opacity: 0.65;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+/* Hover (desktop only feel) */
+.client-logo-row img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.08);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .client-logo-row img {
+        max-width: 70px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .client-logo-row {
+        gap: 22px;
+    }
+
+    .client-logo-row img {
+        max-width: 55px;
     }
 }
 
@@ -699,6 +776,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#stats">Results</a></li>
+                       <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="mobile-menu-btn">
@@ -707,19 +785,34 @@
             </nav>
         </div>
         <div class="mobile-menu">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#stats">Results</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
-
+            <ul>
+                <li><a href="#home"></a></li>
+                <li><a href="#services"></li>
+                <li><a href="#about"></a></li>
+                <li><a href="#stats"></a></li>
+                <li><a href="#gallery"></a>a></li>
+                <li><a href="#contact"></a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <!-- Home Page Clients Logos -->
+<section class="home-clients">
+    <div class="container">
+
+
+        <div class="client-logo-row">
+            <img src="https://i.postimg.cc/mkfKWNSp/Whats-App-Image-2025-12-25-at-12-50-43-PM-(1).jpg" alt="Client 1">
+            <img src="https://i.postimg.cc/gJPKYMfy/Whats-App-Image-2025-12-25-at-12-50-43-PM.jpg" alt="Client 2">
+            <img src="https://i.postimg.cc/TPjDcT4g/Whats-App-Image-2025-12-25-at-12-50-44-PM-(2).jpg" alt="Client 3">
+            <img src="https://i.postimg.cc/GmwtgZY4/Whats-App-Image-2025-12-25-at-12-50-44-PM-(1).jpg" alt="Client 4">
+            <img src="https://i.postimg.cc/0QbJ17N2/Whats-App-Image-2025-12-25-at-12-50-44-PM.jpg" alt="Client 5">
+             <img src="https://i.postimg.cc/BnLybVw2/Whats-App-Image-2025-12-27-at-12-31-39-PM-(2).jpg" alt="Client 6">
+        </div>
+    </div>
+</section>
         <div class="hero-bg">
             <div class="circle"></div>
             <div class="circle"></div>
@@ -814,7 +907,39 @@
             </div>
         </div>
     </section>
+    <!-- Gallery Section -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
 
+          <div class="gallery-item">
+    <img src="https://i.postimg.cc/G3vkYzsH/Whats-App-Image-2025-12-27-at-12-16-59-PM-(2).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+            <div class="gallery-item">
+    <img src="https://i.postimg.cc/x1LDVwkn/Whats-App-Image-2025-12-27-at-12-16-59-PM-(1).jpg"alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+             <div class="gallery-item">
+    <img src="https://i.postimg.cc/sDDvXJPs/Whats-App-Image-2025-12-27-at-12-16-59-PM.jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+            <div class="gallery-item">
+    <img src="https://i.postimg.cc/jSTwTr8J/Whats-App-Image-2025-12-27-at-12-31-39-PM-(1).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+            <div class="gallery-item">
+    <img src="https://i.postimg.cc/ZqFLmcF9/Whats-App-Image-2025-12-27-at-12-31-39-PM.jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+             <div class="gallery-item">
+    <img src="https://i.postimg.cc/FHbSkKfx/Whats-App-Image-2025-12-27-at-12-31-38-PM.jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+             <div class="gallery-item">
+    <img src="https://i.postimg.cc/ht0rWs0v/Whats-App-Image-2025-12-27-at-12-31-37-PM-(1).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+         <div class="gallery-item">
+    <img src="https://i.postimg.cc/JhDGc4tM/Whats-App-Image-2025-12-27-at-12-31-38-PM-(1).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
+</div>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -842,15 +967,18 @@
                 <div class="footer-links">
                     <h3>Contact Info</h3>
                     <ul>
-                        <li><a href="mailto:detective@spysolutions.in">inf@detective@spysolutions.in.com</a></li>
-                        <li><a href="tel:++91 821 806 1872">+91 821 806 1872</a></li>
-                        <li><a href="#">123 Digital Avenue, Suite 500</a></li>
+                        <li><a href="mailto:infodetective@spysolutions.in>infodetective@spysolutions.in</a></li>
+                        <li><a href="tel:+11234567890">+918218061872</a></li>
+                        <li><a href="#">New Delhi – Haryana – Kolkatta,
+Maharashtra, Karnataka, Goa, Kerala,
+Andhra Pradesh,
+Telangana, Tamil Nadu</a></li>
                         <li><a href="#">San Francisco, CA 94107</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 spy solutions. All rights reserved. | Digital Marketing Agency</p>
+                <p>&copy; 2025 spy solutions. All rights reserved. | Detective Agency</p>
             </div>
         </div>
     </footer>
