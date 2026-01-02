@@ -1,4 +1,5 @@
 
+
       <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -771,6 +772,124 @@
         gap: 22px;
     }
 }
+        /* ===== MOBILE TEXT & WIDTH FIX ===== */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.hero h1,
+.hero p {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .hero p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .client-logo-row img {
+        max-width: 55px;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-bg {
+        display: none;
+    }
+}
+/* ===== STEP 2: MOBILE BACKGROUND FIX ===== */
+@media (max-width: 600px) {
+    .hero-bg {
+        display: none;
+    }
+}
+/* ===== FULL RESPONSIVE POLISH ===== */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 16px;
+    }
+
+    .section-row,
+    .row,
+    .flex {
+        flex-direction: column;
+    }
+
+    .btn,
+    button {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+/* ===== FINAL MOBILE TUNING ===== */
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+
+    .services-grid,
+    .gallery-grid,
+    .stats-grid {
+        gap: 20px;
+    }
+
+    .service-card,
+    .gallery-item,
+    .stat-item {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
 
     </style>
 </head>
