@@ -992,113 +992,114 @@ Telangana, Tamil Nadu</a></li>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+ <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mobileMenu.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        mobileMenuBtn.innerHTML = mobileMenu.classList.contains('active')
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
         });
+    });
 
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
+    // Scroll Animation Functionality
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-        // Scroll Animation Functionality
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
+                // Animate stats counting
+                if (entry.target.classList.contains('stat-item')) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const target = parseInt(statNumber.getAttribute('data-count'));
+                    const duration = 2000; // 2 seconds
+                    const step = target / (duration / 16); // 60fps
+                    let current = 0;
 
-                    // Animate stats counting
-                    if (entry.target.classList.contains('stat-item')) {
-                        const statNumber = entry.target.querySelector('.stat-number');
-                        const target = parseInt(statNumber.getAttribute('data-count'));
-                        const duration = 2000; // 2 seconds
-                        const step = target / (duration / 16); // 60fps
-                        let current = 0;
-
-                        const timer = setInterval(() => {
-                            current += step;
-                            if (current >= target) {
-                                statNumber.textContent = target + (statNumber.getAttribute('data-count') === '98' ? '%' : '+');
-                                clearInterval(timer);
-                            } else {
-                                statNumber.textContent = Math.floor(current) + (statNumber.getAttribute('data-count') === '98' ? '%' : '+');
-                            }
-                        }, 16);
-                    }
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            statNumber.textContent = target + (statNumber.getAttribute('data-count') === '98' ? '%' : '+');
+                            clearInterval(timer);
+                        } else {
+                            statNumber.textContent = Math.floor(current) + (statNumber.getAttribute('data-count') === '98' ? '%' : '+');
+                        }
+                    }, 16);
                 }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.service-card').forEach(card => {
-            observer.observe(card);
+            }
         });
+    }, observerOptions);
 
-        document.querySelectorAll('.about-text, .about-visual').forEach(el => {
-            observer.observe(el);
+    // Observe elements for animation
+    document.querySelectorAll('.service-card').forEach(card => {
+        observer.observe(card);
+    });
+
+    document.querySelectorAll('.about-text, .about-visual').forEach(el => {
+        observer.observe(el);
+    });
+
+    document.querySelectorAll('.stat-item').forEach(stat => {
+        observer.observe(stat);
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
         });
+    });
 
-        document.querySelectorAll('.stat-item').forEach(stat => {
-            observer.observe(stat);
+    // Parallax effect for hero circles
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const circles = document.querySelectorAll('.circle');
+
+        circles.forEach((circle, index) => {
+            const speed = 0.3 + (index * 0.1);
+            const yPos = -(scrolled * speed);
+            circle.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.2}deg)`;
         });
+    });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+    // Initialize animations on page load
+    window.addEventListener('load', () => {
+        // Animate hero content
+        document.querySelector('.hero-content').style.animationDelay = '0.5s';
 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        // Animate service cards with delay
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
         });
+    });
+</script>
 
-        // Parallax effect for hero circles
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const circles = document.querySelectorAll('.circle');
-
-            circles.forEach((circle, index) => {
-                const speed = 0.3 + (index * 0.1);
-                const yPos = -(scrolled * speed);
-                circle.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.2}deg)`;
-            });
-        });
-
-        // Initialize animations on page load
-        window.addEventListener('load', () => {
-            // Animate hero content
-            document.querySelector('.hero-content').style.animationDelay = '0.5s';
-
-            // Animate service cards with delay
-            document.querySelectorAll('.service-card').forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-            });
-        });
-    </script>
 </body>
 </html>
