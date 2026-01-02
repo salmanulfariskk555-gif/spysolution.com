@@ -723,28 +723,17 @@
 .gallery-item:hover::after {
     opacity: 1;
 }
-/* Clients logo row */
-.client-logo-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
 /* Laptop / Desktop */
 .client-logo-row img {
     max-width: 80px;
-    opacity: 0.65;
-    filter: grayscale(100%);
+    opacity: 1;       /* full visible */
+    filter: none;     /* grayscale removed */
     transition: all 0.3s ease;
 }
 
 /* Hover (desktop only feel) */
 .client-logo-row img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: scale(1.08);
+    transform: scale(1.08);  /* just zoom effect, no color change */
 }
 
 /* Tablet */
@@ -752,7 +741,18 @@
     .client-logo-row img {
         max-width: 70px;
     }
-}/* ===============================
+}
+
+/* Mobile spacing fix */
+@media (max-width: 600px) {
+    .client-logo-row {
+        gap: 22px;
+    }
+}
+
+
+
+/* ===============================
    MOBILE MENU FIX (FINAL)
    =============================== */
 
