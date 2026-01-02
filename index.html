@@ -889,6 +889,55 @@ img {
         justify-content: center;
     }
 }
+        /* WhatsApp Floating Button */
+.whatsapp-float-left {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float-left:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.slide-in-left {
+    animation: slideIn 0.8s forwards 0.5s, bounce 2s infinite 1.3s;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float-left {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
 
 
     </style>
@@ -1109,6 +1158,11 @@ Telangana, Tamil Nadu</a></li>
                 <p>&copy; 2025 spy solutions. All rights reserved. | Detective Agency</p>
             </div>
         </div>
+        <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918218061872" target="_blank" class="whatsapp-float-left slide-in-left">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
     </footer>
 
  <script>
