@@ -1,9 +1,10 @@
- <!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spysolution| job conseltation</title>
+    <title>Spy Solutions | Professional Detective & Surveillance Services India</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -750,18 +751,27 @@
     .client-logo-row img {
         max-width: 70px;
     }
+}/* ===============================
+   MOBILE MENU FIX (FINAL)
+   =============================== */
+
+/* Desktop / Laptop: mobile menu force hide */
+@media (min-width: 993px) {
+    .mobile-menu,
+    .mobile-menu.active {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
 }
 
-/* Mobile */
+/* Mobile spacing fix */
 @media (max-width: 600px) {
     .client-logo-row {
         gap: 22px;
     }
-
-    .client-logo-row img {
-        max-width: 55px;
-    }
 }
+
     </style>
 </head>
 <body>
@@ -782,17 +792,17 @@
                     <i class="fas fa-bars"></i>
                 </button>
             </nav>
-        </div>
         <div class="mobile-menu">
-            <ul>
-                <li><a href="#home"></a></li>
-                <ali><a href="#services"></a><li>
-                <li><a href="#about"></a></li>
-                <li><a href="#stats"></a></li>
-                <li><a href="#gallery"></a></li>
-                <li><a href="#contact"></a></li>
-            </ul>
-        </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#stats">Results</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
     </header>
 
     <!-- Hero Section -->
