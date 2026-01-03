@@ -937,7 +937,67 @@ img {
         right: 20px;
     }
 }
-
+/* Footer Styling */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 60px 0 30px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+footer .footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00e676;
+}
+footer .footer-logo span {
+    color: #fff;
+}
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+footer .footer-about p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+footer .footer-links h3 {
+    margin-bottom: 15px;
+    color: #00e676;
+}
+footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+footer .footer-links ul li {
+    margin-bottom: 10px;
+}
+footer .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+footer .footer-links ul li a:hover {
+    color: #00e676;
+}
+footer .social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+footer .social-links a:hover {
+    color: #00e676;
+}
+footer .copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
 
 
     </style>
@@ -947,7 +1007,7 @@ img {
     <header>
         <div class="container">
             <nav>
-                <div class="logo">spy<span>solution</span></div>
+                <div class="logo">spy<span>solutions</span></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
@@ -997,93 +1057,138 @@ img {
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1>your trusted parner in comprehensive spy solution</h1>
-                <p>cutting edge surveillance technolagy and expert support for your securitu needs.</p>
-                <a href="#contact" class="btn">contact spy solution</a>
+                <h1>Your Trusted Partner in Professional Spy Solutions</h1>
+<p>Cutting-edge surveillance technology and expert investigation support tailored to your security needs.</p>
+                <a href="#contact" class="btn">contact spy solutions</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>consultation</h3>
-                    <p>Transform raw data into actionable insights with our advanced analytics solutions that drive strategic decision-making.</p>
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-shield"></i>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>infarmation collect</h3>
-                    <p>Reach your ideal audience with precision-targeted ad campaigns across multiple digital platforms.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>verification</h3>
-                    <p>Improve your search engine rankings and drive organic traffic with our comprehensive SEO strategies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>reporting</h3>
-                    <p>Engage your audience with compelling content that tells your brand story and converts visitors into customers.</p>
-                </div>
+                <h3>Consultation</h3>
+                <p>Professional consultation to understand your investigation needs and plan the most effective surveillance strategy.</p>
             </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>Information Collection</h3>
+                <p>Discrete information gathering using advanced surveillance methods while maintaining complete confidentiality.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <h3>Verification</h3>
+                <p>Background verification and authenticity checks for individuals, businesses, and legal purposes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Reporting</h3>
+                <p>Detailed investigation reports with factual findings prepared for legal and personal use.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-camera-retro"></i>
+                </div>
+                <h3>Evidence Collection</h3>
+                <p>Legally captured photo, video, and document evidence handled securely with strict confidentiality.</p>
+            </div>
+
+            <!-- NEW FOLLOW-UP SERVICE -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Follow-Up Investigation</h3>
+                <p>Continuous monitoring and follow-up actions after evidence collection to ensure complete and accurate results.</p>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Driving Digital Transformation</h2>
-                    <p>At VoizonOutlets, we believe in the power of digital innovation to transform businesses. Our team combines creative thinking with analytical rigor to deliver marketing solutions that work.</p>
-                    <p>With over a decade of experience across industries, we've mastered the art of connecting brands with their audiences in meaningful ways.</p>
-                    <p>Our approach is simple: understand your goals, analyze your market, and execute strategies that deliver measurable ROI.</p>
-                </div>
-                <div class="about-visual">
-                    <div class="visual-element"></div>
-                    <div class="visual-element"></div>
-                    <div class="visual-element"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-content">
 
-    <!-- Stats Section -->
-    <section class="stats" id="stats">
-        <div class="container">
-            <h2 class="section-title">Our Impact</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="250">0</div>
-                    <div class="stat-label">Clients Worldwide</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="98">0</div>
-                    <div class="stat-label">Client Retention</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="24">0</div>
-                    <div class="stat-label">Hours Support</div>
-                </div>
+            <div class="about-text">
+                <h2>Trusted Private Investigation Experts</h2>
+
+                <p>
+                    At <strong>Spy Solutions</strong>, we specialize in delivering discreet, reliable, and legally compliant
+                    private investigation services across India.
+                </p>
+
+                <p>
+                    Our experienced investigators use advanced surveillance techniques and strategic intelligence
+                    methods to uncover the truth while maintaining complete confidentiality.
+                </p>
+
+                <p>
+                    From consultation and evidence collection to follow-up investigations and detailed reporting,
+                    we ensure every case is handled with professionalism, accuracy, and integrity.
+                </p>
             </div>
+
+            <div class="about-visual">
+                <div class="visual-element"></div>
+                <div class="visual-element"></div>
+                <div class="visual-element"></div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
+   <!-- Stats Section -->
+<section class="stats" id="stats">
+    <div class="container">
+        <h2 class="section-title">Our Proven Track Record</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="550">0</div>
+                <div class="stat-label">Clients Served Across India</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="98">0</div>
+                <div class="stat-label">Client Satisfaction Rate (%)</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="1200">0</div>
+                <div class="stat-label">Cases Successfully Closed</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="24">0</div>
+                <div class="stat-label">Confidential Support (24/7)</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
     <!-- Gallery Section -->
 <section class="gallery" id="gallery">
     <div class="container">
@@ -1118,52 +1223,49 @@ img {
     </div>
 </section>
     <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">SPY<span>SOLUTION</span></div>
-                    <p>Transforming businesses through innovative digital marketing solutions. Let's work together to amplify your brand's voice in the digital landscape.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#stats">Case Studies</a></li>
-                        <li><a href="#contact">Get In Touch</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><a href="mailto:infodetective@spysolutions.in>infodetective@spysolutions.in</a></li>
-                        <li><a href="tel:+11234567890">+918218061872</a></li>
-                        <li><a href="#">New Delhi – Haryana – Kolkatta,
-Maharashtra, Karnataka, Goa, Kerala,
-Andhra Pradesh,
-Telangana, Tamil Nadu</a></li>
-                        <li><a href="#">San Francisco, CA 94107</a></li>
-                    </ul>
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">SPY<span>SOLUTION</span></div>
+                <p>Transforming businesses through innovative digital marketing solutions. Let's work together to amplify your brand's voice in the digital landscape.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 spy solutions. All rights reserved. | Detective Agency</p>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#stats">Case Studies</a></li>
+                    <li><a href="#contact">Get In Touch</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><a href="mailto:infodetective@spysolutions.in">infodetective@spysolutions.in</a></li>
+                    <li><a href="tel:+918218061872">+918218061872</a></li>
+                    <li>New Delhi – Haryana – Kolkatta, Maharashtra, Karnataka, Goa, Kerala, Andhra Pradesh, Telangana, Tamil Nadu</li>
+                    <li>San Francisco, CA 94107</li>
+                </ul>
             </div>
         </div>
-        <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/918218061872" target="_blank" class="whatsapp-float-left slide-in-left">
-    <i class="fab fa-whatsapp"></i>
-</a>
+        <div class="copyright">
+            <p>&copy; 2025 SPY SOLUTION. All rights reserved. | Detective Agency</p>
+        </div>
+    </div>
 
-    </footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918218061872" target="_blank" class="whatsapp-float-left slide-in-left">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</footer>
 
  <script>
     // Mobile Menu Toggle
