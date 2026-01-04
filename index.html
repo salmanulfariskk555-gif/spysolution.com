@@ -730,335 +730,28 @@
 
 
 
-/* ===============================
-   MOBILE MENU FIX (FINAL)
-   =============================== */
-
-/* Desktop / Laptop: mobile menu force hide */
-@media (min-width: 993px) {
-    .mobile-menu,
-    .mobile-menu.active {
-        display: none !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-}
-
-/* Mobile spacing fix */
-@media (max-width: 600px) {
-    .client-logo-row {
-        gap: 22px;
-    }
-}
-        /* ===== MOBILE TEXT & WIDTH FIX ===== */
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.hero h1,
-.hero p {
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 30px;
-        line-height: 1.2;
-        text-align: left;
-    }
-
-    .hero p {
-        font-size: 16px;
-        text-align: left;
-    }
-
-    .client-logo-row img {
-        max-width: 55px;
-        height: auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero-bg {
-        display: none;
-    }
-}
-/* ===== STEP 2: MOBILE BACKGROUND FIX ===== */
-@media (max-width: 600px) {
-    .hero-bg {
-        display: none;
-    }
-}
-/* ===== FULL RESPONSIVE POLISH ===== */
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    section {
-        padding: 40px 16px;
-    }
-
-    .section-row,
-    .row,
-    .flex {
-        flex-direction: column;
-    }
-
-    .btn,
-    button {
-        width: 100%;
-        text-align: center;
-        padding: 14px;
-        font-size: 16px;
-    }
-}
-/* ===== FINAL MOBILE TUNING ===== */
-@media (max-width: 768px) {
-
-    header {
-        padding: 10px 0;
-    }
-
-    nav {
-        padding: 10px 0;
-    }
-
-    .hero {
-        height: auto;
-        min-height: 100vh;
-        padding-top: 100px;
-    }
-
-    .hero-content {
-        padding: 0 10px;
-    }
-
-    .services-grid,
-    .gallery-grid,
-    .stats-grid {
-        gap: 20px;
-    }
-
-    .service-card,
-    .gallery-item,
-    .stat-item {
-        margin-bottom: 10px;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-}
-        /* WhatsApp Floating Button */
-.whatsapp-float-left {
+/* Header & Logo */
+header {
+    background-color: #fff;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366;
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    z-index: 9999;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-float-left:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-@keyframes slideIn {
-    from { transform: translateX(-100px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.slide-in-left {
-    animation: slideIn 0.8s forwards 0.5s, bounce 2s infinite 1.3s;
-}
-
-@media (max-width: 480px) {
-    .whatsapp-float-left {
-        width: 50px;
-        height: 50px;
-        font-size: 26px;
-        bottom: 20px;
-        right: 20px;
-    }
-}
-/* Footer Styling */
-footer {
-    background: #111;
-    color: #fff;
-    padding: 60px 0 30px;
-    position: relative;
-    font-family: 'Arial', sans-serif;
-}
-footer .footer-logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #00e676;
-}
-footer .footer-logo span {
-    color: #fff;
-}
-footer .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
-footer .footer-about p {
-    margin: 15px 0;
-    line-height: 1.6;
-}
-footer .footer-links h3 {
-    margin-bottom: 15px;
-    color: #00e676;
-}
-footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-footer .footer-links ul li {
-    margin-bottom: 10px;
-}
-footer .footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-footer .footer-links ul li a:hover {
-    color: #00e676;
-}
-footer .social-links a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #fff;
-    font-size: 18px;
-    transition: 0.3s;
-}
-footer .social-links a:hover {
-    color: #00e676;
-}
-footer .copyright {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #aaa;
-}
-       /* Gallery Section */
-.gallery {
-    padding: 100px 0;
-    background-color: var(--secondary-white);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-}
-
-.gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease, filter 0.6s ease;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Hover effect */
-.gallery-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35); /* overlay on hover */
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.15) rotate(2deg); /* zoom + slight rotation */
-    filter: brightness(1.1); /* brighten image */
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-}
-
-/* Section title */
-.section-title {
-    text-align: center;=99
-    font-size: 36px;
-    margin-bottom: 50px;
-    color: #222;
-    font-weight: 700;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .gallery-grid {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-/* ===== HEADER LOGO + MOBILE FIX ===== */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    position: relative;
-    z-index: 1001;
+    flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    z-index: 1002;
 }
 
 .logo img {
@@ -1070,11 +763,11 @@ nav {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 700;
-    letter-spacing: 1.5px;
     color: #000;
+    white-space: nowrap;
 }
 
-/* Desktop Navigation */
+/* Desktop Menu */
 .nav-links {
     display: flex;
     list-style: none;
@@ -1088,11 +781,7 @@ nav {
     transition: all 0.3s;
 }
 
-.nav-links a:hover {
-    letter-spacing: 1px;
-}
-
-/* Mobile */
+/* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -1100,9 +789,9 @@ nav {
     font-size: 28px;
     cursor: pointer;
     color: #000;
-    z-index: 1003;
 }
 
+/* Mobile Menu */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -1141,35 +830,47 @@ nav {
     font-size: 18px;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 992px) {
     .nav-links {
         display: none;
     }
-
     .mobile-menu-btn {
         display: block;
     }
 }
 
 @media (max-width: 768px) {
-    .logo img {
-        height: 40px;
-    }
-
-    .logo-text {
-        font-size: 18px;
-    }
+    .logo img { height: 40px; }
+    .logo-text { font-size: 18px; }
 }
+
+@media (max-width: 480px) {
+    nav { padding: 10px 15px; }
+    .logo img { height: 35px; }
+    .logo-text { font-size: 16px; }
+    .mobile-menu-btn { font-size: 26px; }
+    .mobile-menu li a { font-size: 16px; }
+}
+/* ===== MOBILE HAMBURGER RIGHT TOP-START ALIGN FIX ===== */
 @media (max-width: 992px) {
     .mobile-menu-btn {
-        align-self: flex-end; /* Button right-ലേക്ക് */
-        margin-right: 0;       /* Container-നുള്ള margin confirm */
+        position: absolute; /* fixed inside nav */
+        top: 10px;          /* distance from top */
+        right: 10px;        /* distance from right */
+        display: block;
+        z-index: 1005;      /* always on top */
+    }
+
+    nav {
+        position: relative; /* parent of button */
+    }
+
+    .logo {
+        width: auto;        /* avoid stretching */
+        justify-content: flex-start;
     }
 }
-
-
-
 
     </style>
 </head>
@@ -1546,6 +1247,7 @@ nav {
             card.style.animationDelay = `${index * 0.2}s`;
         });
     });
+
 
 </script>
 
