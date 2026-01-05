@@ -1272,6 +1272,95 @@ footer .copyright {
         justify-content: center;
     }
 }
+        /* ========= GLOBAL MOBILE / RESPONSIVE FIX ========= */
+
+/* 1. Prevent horizontal scroll anywhere */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* 2. Make container fully responsive */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* 3. All images scale to container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 4. Hero title & paragraph responsive */
+.hero h1 {
+    font-size: clamp(24px, 6vw, 64px);
+    word-break: break-word;
+}
+
+.hero p {
+    font-size: clamp(14px, 4vw, 20px);
+}
+
+/* 5. Grids responsive and prevent overflow */
+.services-grid,
+.achievements-grid,
+.gallery-grid,
+.client-logo-row {
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* 6. Force cards & gallery items to fit inside container */
+.service-card,
+.achievement-card,
+.gallery-item {
+    min-width: 0;
+}
+
+/* 7. Mobile-specific grid adjustments */
+@media (max-width: 1024px) {
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1, .hero p {
+        text-align: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-logo-row {
+        gap: 20px;
+    }
+}
+
 
     </style>
 </head>
