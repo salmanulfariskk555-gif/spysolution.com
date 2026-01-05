@@ -1017,6 +1017,201 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+        body {
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+/* Gallery Section */
+.gallery {
+  padding: 50px 0;
+  background: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #222;
+}
+
+/* MOBILE FIRST GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile: 2 images */
+  gap: 12px;
+}
+
+/* Gallery Item */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 160px; /* uniform look on mobile */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Touch / Hover Effect */
+.gallery-item:hover img,
+.gallery-item:active img {
+  transform: scale(1.07);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-item img {
+    height: 240px;
+  }
+}
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1600054800740-54a8b83f33c2') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #caa74d;
+  color: #000;
+}
+
+.btn.secondary {
+  border: 2px solid #caa74d;
+  color: #caa74d;
+}
+
+/* Hover */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+.hero-content {
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+.hero {
+  background-attachment: fixed;
+}
+
 
     </style>
 </head>
@@ -1056,19 +1251,22 @@ nav {
 </header>
 
 
-<!-- Hero Section -->
 <section class="hero" id="home">
-    <div class="hero-bg">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
+  <div class="hero-overlay"></div>
 
-    <div class="container hero-content">
-        <h1>Your Trusted Partner in Professional Spy Solutions</h1>
-        <p>Cutting-edge surveillance technology and expert investigation support tailored to your security needs.</p>
-        <a href="#contact" class="btn">Contact Spy Solutions</a>
+  <div class="hero-content">
+    <h1>Trusted Spy & Security Services</h1>
+    <p>
+      Professional Investigation, Surveillance & Security Solutions
+      Across India
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#services" class="btn primary">Our Services</a>
+      <a href="#contact" class="btn secondary">Contact Us</a>
     </div>
+  </div>
+</section>
 
     <!-- Clients Logos -->
     <div class="home-clients container">
@@ -1192,6 +1390,36 @@ nav {
         </div>
     </div>
 </section>
+    <!-- Stats Section -->
+<section class="stats" id="stats">
+    <div class="container">
+        <h2 class="section-title">Our Proven Track Record</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="550">0</div>
+                <div class="stat-label">Clients Served Across India</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="98">0</div>
+                <div class="stat-label">Client Satisfaction Rate (%)</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="1200">0</div>
+                <div class="stat-label">Cases Successfully Closed</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-count="24">0</div>
+                <div class="stat-label">Confidential Support (24/7)</div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 
@@ -1231,71 +1459,47 @@ nav {
 
 
 
-   <!-- Stats Section -->
-<section class="stats" id="stats">
-    <div class="container">
-        <h2 class="section-title">Our Proven Track Record</h2>
 
-        <div class="stats-grid">
 
-            <div class="stat-item">
-                <div class="stat-number" data-count="550">0</div>
-                <div class="stat-label">Clients Served Across India</div>
-            </div>
-
-            <div class="stat-item">
-                <div class="stat-number" data-count="98">0</div>
-                <div class="stat-label">Client Satisfaction Rate (%)</div>
-            </div>
-
-            <div class="stat-item">
-                <div class="stat-number" data-count="1200">0</div>
-                <div class="stat-label">Cases Successfully Closed</div>
-            </div>
-
-            <div class="stat-item">
-                <div class="stat-number" data-count="24">0</div>
-                <div class="stat-label">Confidential Support (24/7)</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- Gallery Section -->
 <section class="gallery" id="gallery">
-    <div class="container">
-        <h2 class="section-title">Our Gallery</h2>
-        <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+  <div class="container">
+    <h2 class="section-title">Our Gallery</h2>
 
-          <div class="gallery-item">
-    <img src="https://i.postimg.cc/G3vkYzsH/Whats-App-Image-2025-12-27-at-12-16-59-PM-(2).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-            <div class="gallery-item">
-    <img src="https://i.postimg.cc/x1LDVwkn/Whats-App-Image-2025-12-27-at-12-16-59-PM-(1).jpg"alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-             <div class="gallery-item">
-    <img src="https://i.postimg.cc/sDDvXJPs/Whats-App-Image-2025-12-27-at-12-16-59-PM.jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-            <div class="gallery-item">
-    <img src="https://i.postimg.cc/jSTwTr8J/Whats-App-Image-2025-12-27-at-12-31-39-PM-(1).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-            <div class="gallery-item">
-    <img src="https://i.postimg.cc/ZqFLmcF9/Whats-App-Image-2025-12-27-at-12-31-39-PM.jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-             <div class="gallery-item">
-    <img src="https://i.postimg.cc/FHbSkKfx/Whats-App-Image-2025-12-27-at-12-31-38-PM.jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-             <div class="gallery-item">
-    <img src="https://i.postimg.cc/ht0rWs0v/Whats-App-Image-2025-12-27-at-12-31-37-PM-(1).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-         <div class="gallery-item">
-    <img src="https://i.postimg.cc/JhDGc4tM/Whats-App-Image-2025-12-27-at-12-31-38-PM-(1).jpg" alt="Gallery Image" style="width:100%; border-radius:10px;">
-</div>
-        </div>
+    <div class="gallery-grid">
+
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/sDDvXJPs/Whats-App-Image-2025-12-27-at-12-16-59-PM.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/jSTwTr8J/Whats-App-Image-2025-12-27-at-12-31-39-PM-(1).jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/ZqFLmcF9/Whats-App-Image-2025-12-27-at-12-31-39-PM.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/FHbSkKfx/Whats-App-Image-2025-12-27-at-12-31-38-PM.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/ht0rWs0v/Whats-App-Image-2025-12-27-at-12-31-37-PM-(1).jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://i.postimg.cc/JhDGc4tM/Whats-App-Image-2025-12-27-at-12-31-38-PM-(1).jpg">
+      </div>
+
     </div>
+  </div>
 </section>
-    <!-- Footer -->
+
+
+
+
+  <!-- Footer -->
 <footer id="contact">
     <div class="container">
         <div class="footer-content">
