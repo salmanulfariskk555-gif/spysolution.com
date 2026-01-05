@@ -1,6 +1,7 @@
 
 
 
+
       <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -872,7 +873,29 @@ nav {
         justify-content: flex-start;
     }
 }
-       
+     .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Desktop */
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns × 5 rows */
+    }
+}
+
+
+
     </style>
 </head>
 <body>
@@ -945,6 +968,7 @@ nav {
 
         <div class="services-grid">
 
+            <!-- Original Services -->
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-user-shield"></i>
@@ -977,6 +1001,7 @@ nav {
                 <p>Detailed investigation reports with factual findings prepared for legal and personal use.</p>
             </div>
 
+            <!-- Added Services -->
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-camera-retro"></i>
@@ -985,7 +1010,6 @@ nav {
                 <p>Legally captured photo, video, and document evidence handled securely with strict confidentiality.</p>
             </div>
 
-            <!-- NEW FOLLOW-UP SERVICE -->
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-sync-alt"></i>
@@ -994,9 +1018,43 @@ nav {
                 <p>Continuous monitoring and follow-up actions after evidence collection to ensure complete and accurate results.</p>
             </div>
 
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>PSO with Arms (Ex-Service Men)</h3>
+                <p>Professional Security Officers trained in handling arms, all ex-service personnel.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-gun"></i>
+                </div>
+                <h3>Gunmen (Ex-Service Men)</h3>
+                <p>Experienced armed personnel for high-security protection, all ex-service members.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>Bouncer</h3>
+                <p>Professional bouncers for club, event, and personal security needs.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-female"></i>
+                </div>
+                <h3>Lady Bouncer</h3>
+                <p>Trained female security personnel for discreet and professional crowd control.</p>
+            </div>
+
         </div>
     </div>
 </section>
+
+
 
     <!-- About Section -->
 <section class="about" id="about">
