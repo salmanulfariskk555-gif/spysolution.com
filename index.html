@@ -4,6 +4,7 @@
 
 
 
+
       <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1642,6 +1643,151 @@ section * {
 
   .hero-buttons {
     gap: 16px !important;
+  }
+}
+/* ===============================
+   HERO BUTTON FINAL FIX (ONE BLOCK)
+================================ */
+
+/* Button container spacing */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* Button base style */
+.hero-buttons .btn {
+  background-color: #007bff;   /* Blue */
+  border: 2px solid #007bff;
+  color: #ffffff;
+  padding: 16px 38px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Remove white hover / click effect */
+.hero-buttons .btn::before {
+  display: none !important;
+}
+
+/* Hover*
+/* ===============================
+   HERO BUTTON WITH ANIMATION
+================================ */
+
+/* Button container */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* Button base */
+.hero-buttons .btn {
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  color: #ffffff;
+  padding: 16px 38px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  /* Animation */
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Remove white effect */
+.hero-buttons .btn::before {
+  display: none !important;
+}
+
+/* Hover animation */
+.hero-buttons .btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-4px) scale(1.03);   /* lift */
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.35);
+}
+
+/* Click animation */
+.hero-buttons .btn:active {
+  transform: tr
+/* ===============================
+   HERO BUTTON BIG + EXTRA GAP
+================================ */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;              /* 👈 കൂടുതൽ space */
+  margin-top: 35px;
+}
+
+/* Bigger buttons */
+.hero-buttons .btn {
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  color: #ffffff;
+
+  padding: 20px 52px;     /* 👈 size increased */
+  font-size: 17px;
+  border-radius: 35px;
+  font-weight: 600;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Remove white hover */
+.hero-buttons .btn::before {
+  display: none !important;
+}
+
+/* Hover */
+.hero-buttons .btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(0, 123, 255, 0.4);
+}
+
+/* Click */
+.hero-buttons .btn:active {
+  transform: translateY(0) scale(0.96);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 18px 0;
   }
 }
 
