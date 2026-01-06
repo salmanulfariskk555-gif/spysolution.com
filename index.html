@@ -1548,6 +1548,53 @@ section * {
     font-size: 16px !important;
   }
 }
+/* ===== HERO FULL SPACE UTILIZATION FIX ===== */
+
+/* Hero section full height use cheyyan */
+.hero {
+  min-height: calc(100vh - 70px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 70px !important;
+}
+
+/* Hero content slightly DOWN cheyyan */
+.hero-content {
+  margin-top: 60px !important;   /* 👈 ith aanu main change */
+  padding: 20px !important;
+}
+
+/* Heading spacing */
+.hero h1 {
+  margin-bottom: 20px !important;
+  line-height: 1.25 !important;
+}
+
+/* Paragraph spacing */
+.hero p {
+  margin-bottom: 28px !important;
+}
+
+/* Buttons spacing */
+.hero-buttons {
+  margin-top: 10px !important;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 80px !important; /* mobile-il kurachude thazhe */
+  }
+
+  .hero h1 {
+    font-size: 32px !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+  }
+}
 
 
     </style>
