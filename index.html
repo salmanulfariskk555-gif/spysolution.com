@@ -2,6 +2,7 @@
 
 
 
+
       <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1256,110 +1257,47 @@ footer .copyright {
     margin-top: 30px;
 }
 
-/* ======================
-   MOBILE RESPONSIVE
-====================== */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    .footer-links, .footer-about {
-        flex: 1 1 100%;
-    }
-    .social-links {
-        justify-content: center;
-    }
-}
-        /* ========= GLOBAL MOBILE / RESPONSIVE FIX ========= */
-
-/* 1. Prevent horizontal scroll anywhere */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
+.footer-map {
+    margin-top: 40px;
 }
 
-/* 2. Make container fully responsive */
-.container {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
+.footer-map h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
-/* 3. All images scale to container */
-img {
-    max-width: 100%;
-    height: auto;
+.contact-float {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
 }
 
-/* 4. Hero title & paragraph responsive */
-.hero h1 {
-    font-size: clamp(24px, 6vw, 64px);
-    word-break: break-word;
+.float-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
 }
 
-.hero p {
-    font-size: clamp(14px, 4vw, 20px);
+.float-btn:hover {
+    transform: scale(1.1);
 }
 
-/* 5. Grids responsive and prevent overflow */
-.services-grid,
-.achievements-grid,
-.gallery-grid,
-.client-logo-row {
-    width: 100%;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-/* 6. Force cards & gallery items to fit inside container */
-.service-card,
-.achievement-card,
-.gallery-item {
-    min-width: 0;
-}
-
-/* 7. Mobile-specific grid adjustments */
-@media (max-width: 1024px) {
-    .achievements-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1, .hero p {
-        text-align: center;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-text {
-        padding-right: 0;
-        margin-bottom: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-    .achievements-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .client-logo-row {
-        gap: 20px;
-    }
-}
+/* Colors */
+.whatsapp { background: #25D366; }
+.call { background: #007bff; }
+.email { background: #ff4d4d; }
 
 
     </style>
@@ -1404,7 +1342,7 @@ img {
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>Trusted Spy & Security Services</h1>
+    <h1>Trusted Spy & Detective Services in India</h1>
     <p>
       Professional Investigation, Surveillance & Security Solutions
       Across India
@@ -1652,9 +1590,13 @@ img {
 <footer id="contact">
     <div class="container">
         <div class="footer-content">
+
+            <!-- About -->
             <div class="footer-about">
                 <div class="footer-logo">SPY<span>SOLUTION</span></div>
-                <p>Transforming businesses through innovative digital marketing solutions. Let's work together to amplify your brand's voice in the digital landscape.</p>
+                <p>
+                    Your trusted partner for confidential spy and detective services, delivering truth with integrity and professionalism.
+                </p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1662,6 +1604,8 @@ img {
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+
+            <!-- Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -1672,23 +1616,65 @@ img {
                     <li><a href="#contact">Get In Touch</a></li>
                 </ul>
             </div>
+
+            <!-- Contact Info -->
             <div class="footer-links">
                 <h3>Contact Info</h3>
                 <ul>
                     <li><a href="mailto:infodetective@spysolutions.in">infodetective@spysolutions.in</a></li>
-                    <li><a href="tel:+918218061872">+918218061872</a></li>
-                    <li>New Delhi – Haryana – Kolkatta, Maharashtra, Karnataka, Goa, Kerala, Andhra Pradesh, Telangana, Tamil Nadu</li>
-                    <li>San Francisco, CA 94107</li>
+                    <li><a href="tel:+918585847518">+91 85858 47518</a></li>
+
+                    <li>
+                        <strong>Head Office:</strong><br>
+                        Spy Solutions<br>
+                        Tower No 10, Magarpatta Inner Circle,<br>
+                        Cyber City, Magarpatta,<br>
+                        Hadapsar, Pune, Maharashtra – 411013
+                    </li>
                 </ul>
             </div>
+
         </div>
+
+        <!-- Google Map -->
+        <div class="footer-map">
+            <h3>Head Office Location</h3>
+            <iframe 
+                src="https://www.google.com/maps?q=Tower%20No%2010,%20Magarpatta%20Inner%20Circle,%20Cyber%20City,%20Hadapsar,%20Pune,%20Maharashtra%20411013&output=embed"
+                width="100%" 
+                height="250" 
+                style="border:0; border-radius:10px;"
+                loading="lazy">
+            </iframe>
+        </div>
+        <!-- Floating Contact Buttons -->
+<div class="contact-float">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/918218061872" target="_blank" class="float-btn whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call -->
+    <a href="tel:+918218061872" class="float-btn call">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:info@example.com" class="float-btn email">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+
+
+        <!-- Copyright -->
         <div class="copyright">
             <p>&copy; 2025 SPY SOLUTION. All rights reserved. | Detective Agency</p>
         </div>
     </div>
-
-
 </footer>
+
 
  <script>
     // Mobile Menu Toggle
