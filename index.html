@@ -1502,6 +1502,52 @@ section * {
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* ===== HOME PAGE TEXT ALIGN FIX ===== */
+
+/* Hero section restore */
+.hero {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding-top: 70px !important;
+  min-height: calc(100vh - 70px) !important;
+}
+
+/* Hero content spacing */
+.hero-content {
+  margin-top: 0 !important;
+  padding: 20px !important;
+}
+
+/* Fix heading spacing */
+.hero h1 {
+  margin-top: 0 !important;
+  margin-bottom: 16px !important;
+  line-height: 1.2 !important;
+}
+
+/* Fix paragraph spacing */
+.hero p {
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+/* Buttons spacing */
+.hero-buttons {
+  margin-top: 10px !important;
+}
+
+/* Mobile specific tuning */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+  }
+}
 
 
     </style>
