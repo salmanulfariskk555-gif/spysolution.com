@@ -3,6 +3,7 @@
 
 
 
+
       <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1355,6 +1356,101 @@ footer .copyright {
 @media (max-width: 992px) {
   .nav-links { display: none; }
   .mobile-menu-btn { display: block; }
+}
+/* =====================================
+   MOBILE FRIENDLY FIX ONLY
+===================================== */
+
+/* Prevent horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fixed header spacing */
+header {
+  height: 70px;
+}
+
+.hero {
+  padding-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+/* Navigation */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* Hero text scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Services grid mobile fix */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Achievements grid mobile fix */
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Stats grid mobile fix */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Gallery mobile layout */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile menu full height & scroll */
+.mobile-menu {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Disable heavy effects on mobile */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 
