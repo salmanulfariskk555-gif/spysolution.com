@@ -1299,6 +1299,65 @@ footer .copyright {
 .call { background: #007bff; }
 .email { background: #ff4d4d; }
 
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  padding: 60px 20px;
+  transform: translateX(-100%) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
+  opacity: 0;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+  z-index: 1010;
+}
+
+.mobile-menu.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Close Button */
+.mobile-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1015;
+}
+
+/* Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  pointer-events: none; /* click block only when active */
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+}
+
+
 
     </style>
 </head>
