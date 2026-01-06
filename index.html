@@ -1595,6 +1595,55 @@ section * {
     font-size: 16px !important;
   }
 }
+/* ===== HERO TEXT MORE DOWN + BUTTON GAP FIX ===== */
+
+/* Hero full cover + center */
+.hero {
+  min-height: calc(100vh - 70px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 70px !important;
+}
+
+/* Hero content more down */
+.hero-content {
+  margin-top: 120px !important;   /* 👈 kurachude thazhe */
+  padding: 20px !important;
+}
+
+/* Heading spacing */
+.hero h1 {
+  margin-bottom: 24px !important;
+  line-height: 1.25 !important;
+}
+
+/* Paragraph spacing */
+.hero p {
+  margin-bottom: 34px !important;
+}
+
+/* Buttons spacing (Our Services / Contact Us) */
+.hero-buttons {
+  margin-top: 20px !important;
+  gap: 20px !important;           /* 👈 button gap */
+}
+
+/* Button size for touch */
+.hero-buttons .btn {
+  padding: 16px 38px !important;
+}
+
+/* Mobile extra tuning */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 150px !important; /* mobile-il innum thazhe */
+  }
+
+  .hero-buttons {
+    gap: 16px !important;
+  }
+}
 
 
     </style>
@@ -1948,17 +1997,17 @@ section * {
 <div class="contact-float">
 
     <!-- WhatsApp -->
-    <a href="https://wa.me/918218061872" target="_blank" class="float-btn whatsapp">
+    <a href="https://wa.me/918585847518" target="_blank" class="float-btn whatsapp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Call -->
-    <a href="tel:+918218061872" class="float-btn call">
+    <a href="tel:+918585847518" class="float-btn call">
         <i class="fas fa-phone"></i>
     </a>
 
     <!-- Email -->
-    <a href="mailto:info@example.com" class="float-btn email">
+    <a href="mailto:info@detective@spysolutions.in" class="float-btn email">
         <i class="fas fa-envelope"></i>
     </a>
 
@@ -1967,7 +2016,7 @@ section * {
 
         <!-- Copyright -->
         <div class="copyright">
-            <p>&copy; 2025 SPY SOLUTION. All rights reserved. | Detective Agency</p>
+            <p>&copy; 2025 SPY SOLUTIONS. All rights reserved. | Detective Agency</p>
         </div>
     </div>
 </footer>
