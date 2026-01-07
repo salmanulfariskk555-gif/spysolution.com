@@ -2072,6 +2072,37 @@ footer .footer-links ul {
     margin-bottom: 0 !important;
   }
 }
+/* ===== ABSOLUTE FINAL FIX : HERO OVERLAY ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    position: relative !important;
+    display: block !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 60px !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* REMOVE overlay from layout flow */
+  .hero-overlay {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 12px !important;
+  }
+}
 
 
     </style>
