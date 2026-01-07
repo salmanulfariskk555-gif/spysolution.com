@@ -1996,6 +1996,35 @@ footer .footer-links ul {
   }
 }
 
+/* ===== MOBILE HERO AUTO HEIGHT FIX ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 60px !important;   /* header height */
+    padding-bottom: 12px !important;
+    display: block !important;
+  }
+
+  .hero-content {
+    margin: 0 !important;
+    padding: 12px !important;
+  }
+
+  /* Buttons – no extra gap */
+  .hero-buttons {
+    margin-top: 12px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Remove hidden button spacing */
+  .hero-buttons a,
+  .hero-buttons button {
+    margin-bottom: 0 !important;
+  }
+}
 
 
     </style>
