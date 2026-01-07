@@ -2103,6 +2103,27 @@ footer .footer-links ul {
     padding: 12px !important;
   }
 }
+/* ===== SCREENSHOT CONFIRMED FIX : MOBILE HERO ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto !important;   /* 🔥 THIS is the key */
+    height: auto !important;
+    display: block !important;     /* kill flex centering */
+    padding-top: 70px !important;  /* header space */
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-content {
+    margin: 0 !important;
+    padding: 12px 16px !important;
+  }
+
+  .hero-buttons {
+    margin-bottom: 0 !important;
+  }
+}
 
 
     </style>
