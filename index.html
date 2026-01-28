@@ -2172,6 +2172,52 @@ header {
   }
 }
 
+/* ===== HOME PAGE COMPACT FIX (ADD ONLY) ===== */
+
+/* Hero section height kurakkan */
+.hero {
+  min-height: auto !important;     /* 100vh oyivakkum */
+  height: auto !important;
+  padding-top: 70px !important;    /* header space mathram */
+  padding-bottom: 20px !important; /* bottom space kurachu */
+}
+
+/* Hero content compact */
+.hero-content {
+  margin-top: 0 !important;
+  padding: 10px 20px !important;
+}
+
+/* Text spacing reduce */
+.hero h1 {
+  margin-bottom: 12px !important;
+}
+
+.hero p {
+  margin-bottom: 16px !important;
+}
+
+/* Buttons close together */
+.hero-buttons {
+  margin-top: 10px !important;
+  gap: 14px !important;
+}
+
+/* ===== MOBILE EXTRA COMPACT ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 60px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .hero-content {
+    padding: 8px 14px !important;
+  }
+
+  .hero-buttons {
+    margin-top: 8px !important;
+  }
+}
 
 
     </style>
