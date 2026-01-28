@@ -2135,6 +2135,42 @@ footer .footer-links ul {
     text-transform: capitalize; /* first letters capital */
     letter-spacing: 1px;       /* spacing between letters */
 }
+/* ===== HOME PAGE SPACE FIX (ADD ONLY) ===== */
+
+/* Header height fix */
+header {
+  height: 70px;
+}
+
+/* Hero extra space remove */
+.hero {
+  height: auto !important;
+  min-height: calc(100vh - 70px) !important;
+  padding-top: 70px !important;
+  padding-bottom: 30px !important;
+}
+
+/* Hero content margin override */
+.hero-content {
+  margin-top: 0 !important;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .hero-content {
+    margin-top: 0 !important;
+  }
+}
 
 
 
