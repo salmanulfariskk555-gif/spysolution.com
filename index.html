@@ -2218,7 +2218,32 @@ header {
     margin-top: 8px !important;
   }
 }
+/* REMOVE EXTRA WHITE SPACE */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
+/* FIX EMPTY SPACE BETWEEN SECTIONS */
+section, div {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* HERO / MAIN SECTION FIX */
+.hero, .main, .container {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* REMOVE UNWANTED GAP BEFORE FOOTER */
+footer {
+  margin-top: 0;
+  padding-top: 0;
+}
 
     </style>
 </head>
@@ -2257,15 +2282,20 @@ header {
     </div>
 </header>
 
-
 <section class="hero" id="home">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
     <h1>Trusted Spy & Detective Services in Pan India</h1>
+
     <p>
       Professional Investigation, Surveillance & Security Solutions
       Across India
+    </p>
+
+    <!-- 24/7 Customer Service Line -->
+    <p class="support-line">
+      24/7 Customer Service Available
     </p>
 
     <div class="hero-buttons">
